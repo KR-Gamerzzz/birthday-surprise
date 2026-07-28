@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- PAGE 1 : NAME INPUT SCREEN -->
+
+<section class="page welcome-page">
+
+    <div class="welcome-box">
+
+        <h1>🎂 Birthday Surprise 🎂</h1>
+
+        <p>
+            Enter the name of the birthday person ✨
+        </p>
+
+
+        <input 
+        type="text" 
+        id="birthdayNameInput"
+        placeholder="Enter Name Here">
+
+
+        <button onclick="startCelebration()">
+            Celebrate Birthday 🎉
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 2 : WELCOME ANIMATION SCREEN -->
+
+<section class="page animation-page">
+
+    <div class="animation-box">
+
+        <div class="loading-cake">
+            🎂
+        </div>
+
+
+        <h1>
+            Preparing A Special Surprise ✨
+        </h1>
+
+
+        <p id="loadingText">
+            Creating magical birthday moments...
+        </p>
+
+
+        <div class="loader">
+            <div class="loader-bar"></div>
+        </div>
+
+
+        <div class="floating-elements">
+            🎈 🎈 ✨ 🎉 ✨ 🎈 🎈
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 3 : MAIN BIRTHDAY SCREEN -->
+
+<section class="page birthday-page">
+
+    <div class="birthday-container">
+
+
+        <h1>
+            🎉 Happy Birthday 
+            <span id="personName">Name</span> 🎉
+        </h1>
+
+
+        <p class="birthday-intro">
+
+            Today is a special day because someone amazing was born ✨
+
+        </p>
+
+
+
+        <div class="birthday-card">
+
+            <h2>
+                💖 A Special Message For You 💖
+            </h2>
+
+
+            <p>
+
+                May your life always be filled with happiness,
+                success, love and countless beautiful memories.
+
+                Keep smiling and keep shining because you are truly special 🌟
+
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="memory-cards">
+
+
+            <div class="memory-card">
+
+                <h3>🌸 Happiness</h3>
+
+                <p>
+                    May every moment of your life bring a reason to smile.
+                </p>
+
+            </div>
+
+
+
+            <div class="memory-card">
+
+                <h3>⭐ Dreams</h3>
+
+                <p>
+                    May all your dreams come true and your journey be amazing.
+                </p>
+
+            </div>
+
+
+
+            <div class="memory-card">
+
+                <h3>🎁 Surprise</h3>
+
+                <p>
+                    A little surprise is waiting for you ahead...
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- PAGE 4 : CAKE AND GIFT SECTION -->
+
+
+<section class="page surprise-page">
+
+
+    <div class="surprise-container">
+
+
+        <h1>
+            🎂 Make A Wish! 🎂
+        </h1>
+
+
+
+        <div class="cake-animation">
+
+            🎂
+
+        </div>
+
+
+
+        <p>
+            Close your eyes and make your birthday wish ✨
+        </p>
+
+
+
+
+        <button class="wish-button" onclick="openGift()">
+
+            Open Your Surprise Gift 🎁
+
+        </button>
+
+
+
+
+
+        <div class="gift-box" id="giftBox">
+
+
+            <div class="gift">
+
+                🎁
+
+            </div>
+
+
+
+            <h2>
+                A Special Surprise For You 💖
+            </h2>
+
+
+            <p>
+
+                May your upcoming year be full of
+                happiness, success and unforgettable moments 🌟
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="confetti">
+
+            🎉 ✨ 🎊 ✨ 🎉
+
+        </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- PAGE 5 : FINAL CELEBRATION SCREEN -->
+
+
+<section class="page final-page">
+
+
+    <div class="final-container">
+
+
+        <h1>
+            🎉 Once Again Happy Birthday 
+            <span id="finalName">Special Person</span> 🎉
+        </h1>
+
+
+
+        <p class="final-message">
+
+            May your life always shine brighter than the stars ✨
+
+            <br><br>
+
+            Keep smiling, keep achieving your dreams,
+            and never forget how special you are 💖
+
+        </p>
+
+
+
+
+        <div class="stars">
+
+            ⭐ ✨ 🌟 ✨ ⭐
+
+        </div>
+
+
+
+
+        <button onclick="restartBirthday()">
+
+            🔄 Replay Surprise
+
+        </button>
+
+
+
+
+        <footer>
+
+            Made with ❤️ for a special person
+
+        </footer>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- Birthday Music -->
+
+<audio id="birthdayMusic" loop>
+
+    <source src="happy-birthday.mp3" type="audio/mp3">
+
+</audio>
+
+
+
+<!-- HTML COMPLETE -->
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

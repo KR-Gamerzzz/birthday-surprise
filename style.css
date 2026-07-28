@@ -1,0 +1,1007 @@
+/* ==========================
+   BIRTHDAY WEBSITE CSS
+   PART 1/3
+========================== */
+
+
+/* RESET */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+
+}
+
+
+
+body {
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+
+    radial-gradient(circle at top, #6a11cb, transparent 40%),
+    linear-gradient(
+        135deg,
+        #12002b,
+        #250044,
+        #ff4b91
+    );
+
+    color: white;
+
+}
+
+
+
+
+/* ALL PAGES */
+
+
+.page {
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    position: relative;
+
+}
+
+
+
+
+/* BACKGROUND STARS */
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+
+    background-size: 40px 40px;
+
+    opacity: 0.15;
+
+    animation: stars 20s linear infinite;
+
+    z-index: -1;
+
+}
+
+
+
+@keyframes stars {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+
+    to {
+
+        transform: translateY(-200px);
+
+    }
+
+}
+
+
+
+
+/* ==========================
+   PAGE 1 : WELCOME SCREEN
+========================== */
+
+
+.welcome-box {
+
+    max-width: 500px;
+
+    width: 90%;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+
+    backdrop-filter: blur(20px);
+
+
+    border-radius: 30px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.25);
+
+
+    box-shadow:
+
+    0 0 40px rgba(255,0,150,0.35);
+
+
+    animation:
+
+    boxAppear 1.2s ease;
+
+}
+
+
+
+@keyframes boxAppear {
+
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        translateY(50px)
+        scale(0.8);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+
+
+.welcome-box h1 {
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+
+    0 0 15px #ff7bd5;
+
+}
+
+
+
+
+.welcome-box p {
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+
+.welcome-box input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 50px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+button {
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #ff0080,
+        #ff8c00
+    );
+
+
+    transition: 0.4s;
+
+}
+
+
+
+button:hover {
+
+    transform:
+
+    translateY(-5px)
+    scale(1.05);
+
+}
+
+
+/* ==========================
+   PAGE 2 : ANIMATION SCREEN
+========================== */
+
+
+.animation-box {
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px;
+
+    text-align: center;
+
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+
+    backdrop-filter: blur(20px);
+
+
+    border-radius: 30px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.2);
+
+
+    box-shadow:
+
+    0 0 40px rgba(255,0,150,0.4);
+
+
+}
+
+
+
+
+.loading-cake {
+
+    font-size: 90px;
+
+    display: inline-block;
+
+
+    animation:
+
+    cakeBounce 1s infinite alternate;
+
+}
+
+
+
+@keyframes cakeBounce {
+
+
+    from {
+
+        transform:
+
+        translateY(0)
+        rotate(-5deg);
+
+    }
+
+
+    to {
+
+        transform:
+
+        translateY(-25px)
+        rotate(5deg);
+
+    }
+
+}
+
+
+
+
+.animation-box h1 {
+
+    font-size: 35px;
+
+    margin: 25px 0 15px;
+
+    text-shadow:
+
+    0 0 15px #ff7bd5;
+
+}
+
+
+
+
+.animation-box p {
+
+    font-size: 18px;
+
+    opacity: 0.9;
+
+}
+
+
+
+
+/* LOADING BAR */
+
+
+.loader {
+
+    width: 100%;
+
+    height: 15px;
+
+    margin-top: 30px;
+
+
+    background:
+
+    rgba(255,255,255,0.2);
+
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+
+.loader-bar {
+
+
+    height: 100%;
+
+    width: 0%;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #ff0080,
+        #ffd700
+    );
+
+
+    border-radius: 20px;
+
+
+    animation:
+
+    loading 4s infinite;
+
+}
+
+
+
+
+@keyframes loading {
+
+
+    0% {
+
+        width:0%;
+
+    }
+
+
+    100% {
+
+        width:100%;
+
+    }
+
+}
+
+
+
+
+
+/* FLOATING BALLOONS */
+
+
+.floating-elements {
+
+
+    font-size: 35px;
+
+    margin-top: 40px;
+
+
+    letter-spacing: 20px;
+
+
+    animation:
+
+    floatBalloons 3s infinite alternate;
+
+}
+
+
+
+
+@keyframes floatBalloons {
+
+
+    from {
+
+        transform:
+
+        translateY(10px);
+
+    }
+
+
+    to {
+
+        transform:
+
+        translateY(-20px);
+
+    }
+
+}
+
+
+
+
+
+/* ==========================
+   CAKE FLOATING EFFECT
+========================== */
+
+
+.cake-animation {
+
+
+    font-size: 120px;
+
+
+    margin: 20px;
+
+
+    filter:
+
+    drop-shadow(
+        0 0 25px #ff69b4
+    );
+
+
+    animation:
+
+    cakeFloat 2s infinite alternate;
+
+}
+
+
+
+
+@keyframes cakeFloat {
+
+
+    from {
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+    to {
+
+        transform:
+
+        translateY(-30px);
+
+    }
+
+}
+
+
+
+
+/* ==========================
+   PAGE 3 : BIRTHDAY SCREEN
+========================== */
+
+
+.birthday-container,
+.surprise-container,
+.final-container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    text-align: center;
+
+    padding: 45px;
+
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+
+    backdrop-filter: blur(20px);
+
+
+    border-radius: 30px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.25);
+
+
+    box-shadow:
+
+    0 0 50px rgba(255,0,150,0.35);
+
+}
+
+
+
+
+.birthday-container h1,
+.surprise-container h1,
+.final-container h1 {
+
+
+    font-size: 42px;
+
+    text-shadow:
+
+    0 0 20px #ff69b4;
+
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.birthday-intro {
+
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* MESSAGE CARD */
+
+
+.birthday-card {
+
+
+    padding: 30px;
+
+    margin: 30px 0;
+
+
+    background:
+
+    rgba(255,255,255,0.15);
+
+
+    border-radius: 25px;
+
+
+    animation:
+
+    cardAppear 1s ease;
+
+}
+
+
+
+@keyframes cardAppear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+        scale(0.8);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+        scale(1);
+
+    }
+
+}
+
+
+
+
+
+.memory-cards {
+
+
+    display:
+
+    flex;
+
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.memory-card {
+
+
+    width:250px;
+
+    padding:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.15);
+
+
+    border-radius:20px;
+
+
+    transition:0.4s;
+
+}
+
+
+
+.memory-card:hover {
+
+
+    transform:
+
+    translateY(-10px)
+    scale(1.05);
+
+
+}
+
+
+
+
+
+/* ==========================
+   GIFT BOX
+========================== */
+
+
+.gift-box {
+
+
+    margin-top:35px;
+
+
+    padding:30px;
+
+
+    display:none;
+
+
+    background:
+
+    rgba(255,255,255,0.15);
+
+
+    border-radius:25px;
+
+
+    animation:
+
+    giftOpen 1s ease;
+
+}
+
+
+
+
+@keyframes giftOpen {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+        rotateX(90deg);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+        rotateX(0);
+
+    }
+
+}
+
+
+
+
+
+.gift {
+
+
+    font-size:100px;
+
+
+    animation:
+
+    giftBounce 1s infinite alternate;
+
+}
+
+
+
+
+@keyframes giftBounce {
+
+
+    from {
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+    to {
+
+        transform:
+
+        translateY(-20px);
+
+    }
+
+}
+
+
+
+
+
+/* CONFETTI */
+
+
+.confetti {
+
+
+    font-size:40px;
+
+    margin-top:30px;
+
+
+    animation:
+
+    confettiMove 2s infinite alternate;
+
+}
+
+
+
+@keyframes confettiMove {
+
+
+    from {
+
+        transform:
+
+        rotate(-5deg);
+
+    }
+
+
+    to {
+
+        transform:
+
+        rotate(5deg);
+
+    }
+
+}
+
+
+
+
+/* ==========================
+   FINAL PAGE
+========================== */
+
+
+.final-message {
+
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin:30px 0;
+
+}
+
+
+
+
+.stars {
+
+
+    font-size:45px;
+
+
+    animation:
+
+    starGlow 1.5s infinite alternate;
+
+}
+
+
+
+@keyframes starGlow {
+
+
+    from {
+
+        opacity:0.5;
+
+        transform:scale(0.9);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+
+
+
+footer {
+
+
+    margin-top:40px;
+
+    opacity:0.8;
+
+}
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+
+@media(max-width:600px){
+
+
+    .welcome-box h1,
+    .birthday-container h1,
+    .final-container h1 {
+
+        font-size:28px;
+
+    }
+
+
+    .memory-card {
+
+        width:100%;
+
+    }
+
+
+    .page {
+
+        padding:15px;
+
+    }
+
+
+}
+
+
+
+/* CSS COMPLETE */
